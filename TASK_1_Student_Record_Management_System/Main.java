@@ -29,6 +29,7 @@ public class Main extends FileHandling {
             case 5:
                     f.deletion();
                     break;
+            default: System.out.println("Invalid Input!....");
 
         }
     }
