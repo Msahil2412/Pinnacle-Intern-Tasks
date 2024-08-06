@@ -100,4 +100,31 @@ public class FileHandling {
         writer.write(fileCon);
         writer.close();
     }
+    public void deletion()throws IOException
+    {
+        StringBuilder con = new StringBuilder();
+        BufferedReader br = new BufferedReader(new FileReader(
+                "D:\\Msahil2412 Workplace\\GITHUB\\Pinnacle-Intern-Tasks\\TASK_1_Student_Record_Management_System\\DemoFile.txt"));
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the Roll Number of the Student to Delete:-->");
+        String rn = s.next();
+        String l = "";
+        while ((l = br.readLine()) != null) {
+            String t = l.substring(0, 2);
+            // System.out.println(t);
+            if (t.equals(rn)) {
+                continue;
+                // System.out.println(l);
+                // System.out.println(t);
+            }
+            con.append(l).append(System.lineSeparator());
+        }
+        String fileCon = con.toString();
+        br.close();
+        s.close();
+        BufferedWriter writer = new BufferedWriter(new FileWriter(
+                "D:\\Msahil2412 Workplace\\GITHUB\\Pinnacle-Intern-Tasks\\TASK_1_Student_Record_Management_System\\DemoFile.txt"));
+        writer.write(fileCon);
+        writer.close();
+    }
 }

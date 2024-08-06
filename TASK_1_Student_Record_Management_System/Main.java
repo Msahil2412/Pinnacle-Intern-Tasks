@@ -26,6 +26,9 @@ public class Main extends FileHandling {
             case 4:
                     f.update();
                     break;
+            case 5:
+                    f.deletion();
+                    break;
 
         }
     }
