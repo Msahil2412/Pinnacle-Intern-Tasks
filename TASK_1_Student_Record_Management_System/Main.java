@@ -23,6 +23,10 @@ public class Main extends FileHandling {
             case 3: 
                     f.insert();
                     break;
+            case 4:
+                    f.update();
+                    break;
+
         }
     }
     

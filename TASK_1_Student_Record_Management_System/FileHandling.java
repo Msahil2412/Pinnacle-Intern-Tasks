@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.Scanner;
 
 public class FileHandling {
 
@@ -64,5 +65,39 @@ public class FileHandling {
         }
         br.close();
         return l-1;
+    }
+    public void update()throws IOException
+    {
+        StringBuilder con = new StringBuilder();
+        BufferedReader br = new BufferedReader(new FileReader("D:\\Msahil2412 Workplace\\GITHUB\\Pinnacle-Intern-Tasks\\TASK_1_Student_Record_Management_System\\DemoFile.txt"));
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the Roll Number of the Student to update:-->");
+        String rn=s.next();
+        s.nextLine();
+        System.out.println("Enter the Complete Old Data-->");
+        String st=s.nextLine();
+        System.out.println("Enter the Complete new Data-->");
+        String st2= s.nextLine();
+
+        String l="";
+        while ((l = br.readLine()) != null) {
+            String t=l.substring(0,2);
+            // System.out.println(t);
+            if(t.equals(rn))
+            {
+                l=l.replace(st, st2);
+                // System.out.println(l);
+                // System.out.println(t);
+                }
+            con.append(l).append(System.lineSeparator());
+        }
+        String fileCon = con.toString();
+        System.out.println(fileCon);
+        br.close();
+        s.close();
+        // fileCon = fileCon.replace(st, st2);
+        BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\Msahil2412 Workplace\\GITHUB\\Pinnacle-Intern-Tasks\\TASK_1_Student_Record_Management_System\\DemoFile.txt"));
+        writer.write(fileCon);
+        writer.close();
     }
 }
