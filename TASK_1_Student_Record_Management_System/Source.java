@@ -1,6 +1,6 @@
 package TASK_1_Student_Record_Management_System;
 
-public class Source {
+public class Source extends FileHandling {
     
     private int noOfStudents;
     private int roll;
