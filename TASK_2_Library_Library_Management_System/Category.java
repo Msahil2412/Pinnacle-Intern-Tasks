@@ -37,7 +37,7 @@ public class Category extends javax.swing.JFrame {
        JPanel jPanel2 = new javax.swing.JPanel();
        JLabel jLabel9 = new javax.swing.JLabel();
        JLabel jLabel10 = new javax.swing.JLabel();
-       JTextArea txtcat = new javax.swing.JTextField();
+       JTextField txtcat = new javax.swing.JTextField();
        JComboBox txtstatus = new javax.swing.JComboBox<>();
        JButton jButton1 = new javax.swing.JButton();
        JButton jButton2 = new javax.swing.JButton();
