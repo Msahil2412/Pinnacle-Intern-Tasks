@@ -11,7 +11,7 @@ public class Main extends FileHandling {
        FileHandling f=new FileHandling();
 
         System.out.println("\n\n\n\nPlease Select According to the below Menu:");
-        System.out.println("1:-> To View Total No. Of Stidents\n2:-> To View List Of Students\n3:-> To Insert a new Student\n4:-> To update a Student Details\n5:-> To delete a Student");
+        System.out.println("1:-> To View Total No. Of Stidents\n2:-> To View List Of Students\n3:-> To Insert a new Student\n4:-> To update a Student Details\n5:-> To delete a Student\n\n");
         int choice=Integer.parseInt(br.readLine());
         switch (choice) {
             case 1:
@@ -30,7 +30,6 @@ public class Main extends FileHandling {
                     f.deletion();
                     break;
             default: System.out.println("Invalid Input!....");
-
         }
     }
     

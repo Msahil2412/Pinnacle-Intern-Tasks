@@ -31,7 +31,7 @@ public class FileHandling {
                 i=-1;
             }
             else
-                pw.print(st+"\t\t  ");
+                pw.print(st);
             i++;
         }
         pw.close();
@@ -46,11 +46,10 @@ public class FileHandling {
         BufferedReader br=new BufferedReader(fr);
 
         String s="";
-        while(s!=null)
+        while((s=br.readLine())!=null)
         {
-            s=br.readLine();
-            if(s!=null)
-                System.out.println(s);
+            // s=br.readLine();
+            System.out.println(s);
         }
         br.close();
         fr.close();
@@ -86,7 +85,7 @@ public class FileHandling {
             if(t.equals(rn))
             {
                 l=l.replace(st, st2);
-                // System.out.println(l);
+                System.out.println(l);
                 // System.out.println(t);
                 }
             con.append(l).append(System.lineSeparator());
